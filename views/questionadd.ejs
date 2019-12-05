@@ -1,0 +1,24 @@
+<%- layout('layouts/main.ejs') %>
+<br>
+<br>
+<br>
+<div class="col-md-4 mx-auto">
+  <div class="card">
+    <div class="card-header">
+      <h3> Pregunta Nueva</h3>
+    </div>
+    <div class="card-body">
+        <form action="/questionadd" method="POST">
+          <div class="form-group">
+              <input type="text" name="question" placeholder="Pregunta" class="form-group" autofocus>
+          </div>
+          <div class="form-group">
+              <input type="text" name="answerA" placeholder="Respuesta" class="col-md-12"><input type="checkbox" name="checkboxA" value="true">
+              <input type="text" name="answerB" placeholder="Respuesta" class="col-md-12"><input type="checkbox" name="checkboxB" value="true">
+              <input type="text" name="answerC" placeholder="Respuesta" class="col-md-12"><input type="checkbox" name="checkboxC" value="true">
+              <input type="text" name="answerD" placeholder="Respuesta" class="col-md-12"><input type="checkbox" name="checkboxD" value="true">
+              <button type="submit" class="btn btn-primary btn-block mt-4">Agregar Pregunta</button>
+          </div>
+    </div>
+  </div>
+</div>

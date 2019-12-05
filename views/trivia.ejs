@@ -1,0 +1,29 @@
+<%- layout('layouts/main.ejs') %>
+<br>
+<br>
+  <ul>
+          <div class="card">
+              <div class="card-header">
+             <main class="container">
+                <div class="card-body">
+         <h1> TRIVIA </h1>
+          <% questions.forEach(function(question){ %>
+            <%= question.title %>
+            <ul>
+                    <% question.answers.forEach(function(answer){ %>
+                    <li> <%= answer.title %> <input type="radio" id=answer._id name=question._id value=answer.isRight ? 'true' : 'false' onclick='checkAnswer(this)' rta=answer._id)> </li>
+                    <% }); %>
+                  </ul>
+          <% }); %>
+          <div class="card-body">
+              <button type="submit" class="btn btn-primary btn-block" id="boton">
+                  ver resultados
+                </button>
+              </div>
+         </main>
+        </div>
+        </div>
+          </div>
+
+  </ul>
+               
